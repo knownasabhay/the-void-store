@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | THE VOID</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Product detail page specific styles moved to styles.css */
+  </style>
+</head>
+<body class="force-nav-scrolled">
+
+  <!-- Navbar -->
+  <nav class="scrolled">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="index.html" class="logo">THE VOID</a>
+      <div class="nav-icons">
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></a>
+        <a href="cart.html" style="position: relative;">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          <span class="cart-count" style="position: absolute; top: -8px; right: -8px; background: var(--text-primary); color: var(--bg-primary); font-size: 9px; font-weight: 900; width: 15px; height: 15px; border-radius: 50%; display: none; align-items: center; justify-content: center;">0</span>
+        </a>
+        <a href="login.html"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="product-detail-layout fade-in">
+      <!-- Left: Gallery -->
+      <div class="product-gallery-system">
+        <div class="thumbnail-list" id="product-thumbnails">
+          <!-- JS injected -->
+        </div>
+        <div class="main-image-view">
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="shop.html">Shop</a>
+            <span class="separator">/</span>
+            <span class="current" id="breadcrumb-name">Product</span>
+          </div>
+          <img id="product-main-img" src="" alt="Product View">
+        </div>
+      </div>
+
+      <!-- Right: Info -->
+      <div class="product-info-system">
+        <div class="product-header-group">
+          <span class="brand-label">THE VOID</span>
+          <h1 class="product-title-large" id="product-name">LOADING...</h1>
+          <p class="product-price-large" id="product-price">₹0</p>
+        </div>
+
+        <div class="size-selector-system">
+          <span class="size-label">SELECT SIZE</span>
+          <div class="size-grid-system" id="product-sizes">
+            <!-- JS injected -->
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn add-to-cart-btn">ADD TO BAG</button>
+          <button class="btn buy-now-btn">BUY IT NOW</button>
+        </div>
+
+        <div class="product-collapsibles">
+          <div class="collapsible-item active">
+            <div class="collapsible-header">DESCRIPTION</div>
+            <div class="collapsible-content">
+              <p id="product-desc">Loading description...</p>
+            </div>
+          </div>
+          <div class="collapsible-item">
+            <div class="collapsible-header">SHIPPING</div>
+            <div class="collapsible-content">
+              <p>FREE STANDARD SHIPPING ON ALL ORDERS. ESTIMATED DELIVERY: 3-5 BUSINESS DAYS WITHIN INDIA.</p>
+            </div>
+          </div>
+          <div class="collapsible-item">
+            <div class="collapsible-header">RETURNS</div>
+            <div class="collapsible-content">
+              <p>COMPLIMENTARY RETURNS WITHIN 14 DAYS OF DELIVERY. ITEMS MUST BE IN ORIGINAL CONDITION WITH ALL TAGS ATTACHED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="section">
+      <h2 class="section-title" style="text-align: left; font-size: 0.8rem; letter-spacing: 0.3em; margin-bottom: 32px;">YOU MAY ALSO LIKE</h2>
+      <div class="product-grid" id="recommended-products">
+        <!-- JS will render this -->
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="shop.html" class="view-all-btn">VIEW ALL PRODUCTS</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html">New Arrivals</a></li>
+            <li><a href="shop.html">Featured</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>ABOUT</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>SOCIAL</h4>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="mailto:studio@thevoid.luxury">Email Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>NEWSLETTER</h4>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="EMAIL ADDRESS" required>
+            <button type="submit" class="btn btn-outline" style="width: 100%;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 THE VOID. ALL RIGHTS RESERVED.</span>
+        <span>DESIGNED FOR THE MODERN WANDERER.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
